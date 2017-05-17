@@ -43,8 +43,7 @@ public class CharacterActions : MonoBehaviour {
         // This part of the code make the character look at the mouse position
         Vector2 lookToWard = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         float targetAngle = Mathf.Atan2(lookToWard.y, lookToWard.x) * Mathf.Rad2Deg;
-        // transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, targetAngle-90f));
-        transform.rotation = Quaternion.Euler(0, 0, targetAngle-90f);
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, targetAngle), turnSpeed*Time.deltaTime);
 
     }
 
