@@ -49,13 +49,16 @@ public class projectileScript : MonoBehaviour {
 
                 if (nOfHits == 1)
                 {
-                    watcher.GetComponent<GameOverScript>().finalHype += 1;
+                    watcher.GetComponent<GameOverScript>().hype += 1;
                 }
                 else
                 {
-                    watcher.GetComponent<GameOverScript>().finalHype += Mathf.Pow(3, (nOfHits-1));
+                    watcher.GetComponent<GameOverScript>().hype += Mathf.Pow(3, (nOfHits-1));
                 }
-                Debug.Log(watcher.GetComponent<GameOverScript>().finalHype);
+                Debug.Log(watcher.GetComponent<GameOverScript>().hype);
+                Destroy(collisionTrig.gameObject);
+
+
             }
 
         }
