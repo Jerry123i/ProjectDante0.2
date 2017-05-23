@@ -10,6 +10,9 @@ public class CharacterActions : MonoBehaviour {
     public GameObject aim; //Objeto a frente do player para evitar overlap do projetil com o player
     public GameObject meleeHit;
     private Camera mainCamera;
+    Vector3 mousePosition;
+    bool invalidTeleport = false;
+    private GameObject[] walls;
 
 	void Start () {
         this.spearOn = true;
@@ -18,6 +21,7 @@ public class CharacterActions : MonoBehaviour {
         this.speed = 5f;
         this.teleport = 100f;
         this.turnSpeed = 10000000f;
+        walls = GameObject.FindGameObjectsWithTag("Wall");
 	}
 	
     void Moving() {
@@ -40,30 +44,31 @@ public class CharacterActions : MonoBehaviour {
         if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
             this.transform.position += ((new Vector3(-speed, -speed, 0)).normalized) * speed * Time.deltaTime;
 
-        // This part of the code make the character look at the mouse position
-        Vector2 lookToWard = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        float targetAngle = Mathf.Atan2(lookToWard.normalized.y, lookToWard.normalized.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, targetAngle), turnSpeed*Time.deltaTime);
+        mousePosition = Input.mousePosition;
+        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        Quaternion rot = Quaternion.LookRotation(transform.position - mousePosition, Vector3.forward);
+        transform.rotation = rot;
+        transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z);
 
 
     }
 
     void Teleporting () {
-        if (Input.GetKey(KeyCode.A) && Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.A) && Input.GetKeyDown(KeyCode.Space))
             this.transform.position += new Vector3(this.transform.position.x + (- teleport) , 0, 0) * Time.deltaTime;
-        else if (Input.GetKey(KeyCode.D) && Input.GetKeyDown(KeyCode.LeftShift))
+        else if (Input.GetKey(KeyCode.D) && Input.GetKeyDown(KeyCode.Space))
             this.transform.position += new Vector3(this.transform.position.x + (+ teleport), 0, 0) * Time.deltaTime;
-        else if (Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.LeftShift))
+        else if (Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.Space))
             this.transform.position += new Vector3(0, this.transform.position.y + (+ teleport), 0) * Time.deltaTime;
-        else if (Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.LeftShift))
+        else if (Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.Space))
             this.transform.position += new Vector3(0, this.transform.position.y + (- teleport), 0) * Time.deltaTime;
-        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A) && Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A) && Input.GetKeyDown(KeyCode.Space))
             this.transform.position += new Vector3(this.transform.position.x + (- teleport), this.transform.position.y + ( + teleport), 0) * Time.deltaTime;
-        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D) && Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D) && Input.GetKeyDown(KeyCode.Space))
             this.transform.position += new Vector3(this.transform.position.x + (+ teleport), this.transform.position.y + (+ teleport), 0) * Time.deltaTime;
-        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D) && Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D) && Input.GetKeyDown(KeyCode.Space))
             this.transform.position += new Vector3(this.transform.position.x + (+ teleport), this.transform.position.y + (- teleport), 0) * Time.deltaTime;
-        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A) && Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A) && Input.GetKeyDown(KeyCode.Space))
             this.transform.position += new Vector3(this.transform.position.x + (- teleport), this.transform.position.y + (- teleport), 0) * Time.deltaTime;
     }
 

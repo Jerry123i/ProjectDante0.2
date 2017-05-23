@@ -45,7 +45,7 @@ public class GameOverScript : MonoBehaviour {
 
         if(hype <= minimalHype)
         {
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("Game Over");
         }
 
         else if (hype < nextLevelHype)

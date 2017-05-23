@@ -80,12 +80,16 @@
     <Compile Include="Assets\Scripts\CharacterScripts\projectileScript.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyHealth.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyProjectile.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyShooter.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\SawBehaviour.cs" />
     <Compile Include="Assets\Scripts\SceneScripts\Credits.cs" />
     <Compile Include="Assets\Scripts\SceneScripts\GameOverScript.cs" />
     <Compile Include="Assets\Scripts\SceneScripts\HighScore.cs" />
     <Compile Include="Assets\Scripts\SceneScripts\SelectButton_Actions.cs" />
     <Compile Include="Assets\Scripts\SceneScripts\SpawnerScript.cs" />
+    <Compile Include="Assets\Scripts\SceneScripts\controladorGameOver.cs" />
+    <Compile Include="Assets\Scripts\SceneScripts\pauseMenu.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
