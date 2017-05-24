@@ -6,6 +6,8 @@ public class CharacterActions : MonoBehaviour {
 
     public bool spearOn, onMeleeCd;
     float speed, teleport, turnSpeed, countMelee;
+    public Sprite spriteSemLanca;
+    public Sprite spriteLanca;
     public GameObject prefab;
     public GameObject aim; //Objeto a frente do player para evitar overlap do projetil com o player
     public GameObject meleeHit;
@@ -102,10 +104,24 @@ public class CharacterActions : MonoBehaviour {
 
     }
 
+    void SetSprite()
+    {
+        if (spearOn)
+        {
+            this.GetComponent<SpriteRenderer>().sprite = spriteLanca;
+        }
+        else
+        {
+            this.GetComponent<SpriteRenderer>().sprite = spriteSemLanca;
+        }
+
+    }
+
 	void Update () {
         Moving ();
         Melee();
         Teleporting ();
         Shooting ();
+        SetSprite();
 	}
 }
