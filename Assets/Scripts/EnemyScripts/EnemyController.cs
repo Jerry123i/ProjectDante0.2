@@ -10,8 +10,7 @@ public class EnemyController : MonoBehaviour {
     private float minDist = 0.5f;
 
 
-
-    private int life;
+    
     public float moveSpeed;
 
     // Use this for initialization

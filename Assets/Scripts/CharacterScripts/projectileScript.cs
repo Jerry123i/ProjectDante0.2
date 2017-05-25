@@ -10,6 +10,7 @@ public class projectileScript : MonoBehaviour {
     bool isProjectile;
     public int nOfHits;
     GameObject watcher;
+    public AudioClip hitSound;
     
 	void Start () {
         nOfHits = 0;
@@ -25,13 +26,6 @@ public class projectileScript : MonoBehaviour {
         }
 	}
 
-   /* private void OnCollisionEnter2D(Collision2D coll)
-    {        
-        if (coll.collider.tag == "Wall")        {
-            isProjectile = false;
-            collider.isTrigger = true;            
-        }
-    }*/
 
     private void OnTriggerEnter2D(Collider2D collisionTrig)
     {
@@ -41,6 +35,12 @@ public class projectileScript : MonoBehaviour {
             if (collisionTrig.gameObject.tag == "Wall")
             {
                 isProjectile = false;
+
+                if (nOfHits >= 2)
+                {
+                    GameObject.FindGameObjectWithTag("Crowd").GetComponent<CrowdScript>().Cheer(nOfHits - 1);
+                }
+
             }
 
             if (collisionTrig.gameObject.tag == "Enemy")
@@ -55,9 +55,10 @@ public class projectileScript : MonoBehaviour {
                 {
                     watcher.GetComponent<GameOverScript>().hype += Mathf.Pow(3, (nOfHits-1));
                 }
-                Debug.Log(watcher.GetComponent<GameOverScript>().hype);
-                Destroy(collisionTrig.gameObject);
 
+                collisionTrig.gameObject.GetComponent<EnemyHealth>().Damage(1);
+                this.GetComponent<AudioSource>().pitch = 1 + ((nOfHits+1) * 0.5f);
+                this.GetComponent<AudioSource>().PlayOneShot(hitSound, 1.0f);
 
             }
 
