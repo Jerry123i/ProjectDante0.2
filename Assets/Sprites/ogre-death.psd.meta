@@ -1,0 +1,1946 @@
+fileFormatVersion: 2
+guid: fb57a5145eb4bb84bb92b10bd941f38a
+timeCreated: 1495723622
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ogre-death_0
+    21300002: ogre-death_1
+    21300004: ogre-death_2
+    21300006: ogre-death_3
+    21300008: ogre-death_4
+    21300010: ogre-death_5
+    21300012: ogre-death_6
+    21300014: ogre-death_7
+    21300016: ogre-death_8
+    21300018: ogre-death_9
+    21300020: ogre-death_10
+    21300022: ogre-death_11
+    21300024: ogre-death_12
+    21300026: ogre-death_13
+    21300028: ogre-death_14
+    21300030: ogre-death_15
+    21300032: ogre-death_16
+    21300034: ogre-death_17
+    21300036: ogre-death_18
+    21300038: ogre-death_19
+    21300040: ogre-death_20
+    21300042: ogre-death_21
+    21300044: ogre-death_22
+    21300046: ogre-death_23
+    21300048: ogre-death_24
+    21300050: ogre-death_25
+    21300052: ogre-death_26
+    21300054: ogre-death_27
+    21300056: ogre-death_28
+    21300058: ogre-death_29
+    21300060: ogre-death_30
+    21300062: ogre-death_31
+    21300064: ogre-death_32
+    21300066: ogre-death_33
+    21300068: ogre-death_34
+    21300070: ogre-death_35
+    21300072: ogre-death_36
+    21300074: ogre-death_37
+    21300076: ogre-death_38
+    21300078: ogre-death_39
+    21300080: ogre-death_40
+    21300082: ogre-death_41
+    21300084: ogre-death_42
+    21300086: ogre-death_43
+    21300088: ogre-death_44
+    21300090: ogre-death_45
+    21300092: ogre-death_46
+    21300094: ogre-death_47
+    21300096: ogre-death_48
+    21300098: ogre-death_49
+    21300100: ogre-death_50
+    21300102: ogre-death_51
+    21300104: ogre-death_52
+    21300106: ogre-death_53
+    21300108: ogre-death_54
+    21300110: ogre-death_55
+    21300112: ogre-death_56
+    21300114: ogre-death_57
+    21300116: ogre-death_58
+    21300118: ogre-death_59
+    21300120: ogre-death_60
+    21300122: ogre-death_61
+    21300124: ogre-death_62
+    21300126: ogre-death_63
+    21300128: ogre-death_64
+    21300130: ogre-death_65
+    21300132: ogre-death_66
+    21300134: ogre-death_67
+    21300136: ogre-death_68
+    21300138: ogre-death_69
+    21300140: ogre-death_70
+    21300142: ogre-death_71
+    21300144: ogre-death_72
+    21300146: ogre-death_73
+    21300148: ogre-death_74
+    21300150: ogre-death_75
+    21300152: ogre-death_76
+    21300154: ogre-death_77
+    21300156: ogre-death_78
+    21300158: ogre-death_79
+    21300160: ogre-death_80
+    21300162: ogre-death_81
+    21300164: ogre-death_82
+    21300166: ogre-death_83
+    21300168: ogre-death_84
+    21300170: ogre-death_85
+    21300172: ogre-death_86
+    21300174: ogre-death_87
+    21300176: ogre-death_88
+    21300178: ogre-death_89
+    21300180: ogre-death_90
+    21300182: ogre-death_91
+    21300184: ogre-death_92
+    21300186: ogre-death_93
+    21300188: ogre-death_94
+    21300190: ogre-death_95
+    21300192: ogre-death_96
+    21300194: ogre-death_97
+    21300196: ogre-death_98
+    21300198: ogre-death_99
+    21300200: ogre-death_100
+    21300202: ogre-death_101
+    21300204: ogre-death_102
+    21300206: ogre-death_103
+    21300208: ogre-death_104
+    21300210: ogre-death_105
+    21300212: ogre-death_106
+    21300214: ogre-death_107
+    21300216: ogre-death_108
+    21300218: ogre-death_109
+    21300220: ogre-death_110
+    21300222: ogre-death_111
+    21300224: ogre-death_112
+    21300226: ogre-death_113
+    21300228: ogre-death_114
+    21300230: ogre-death_115
+    21300232: ogre-death_116
+    21300234: ogre-death_117
+    21300236: ogre-death_118
+    21300238: ogre-death_119
+    21300240: ogre-death_120
+    21300242: ogre-death_121
+    21300244: ogre-death_122
+    21300246: ogre-death_123
+    21300248: ogre-death_124
+    21300250: ogre-death_125
+    21300252: ogre-death_126
+    21300254: ogre-death_127
+    21300256: ogre-death_128
+    21300258: ogre-death_129
+    21300260: ogre-death_130
+    21300262: ogre-death_131
+    21300264: ogre-death_132
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 200
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ogre-death_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 463
+        width: 57
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 463
+        width: 57
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 463
+        width: 57
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_3
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 462
+        width: 57
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_4
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 398
+        width: 57
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_5
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 398
+        width: 57
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_6
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 398
+        width: 57
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_7
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 398
+        width: 57
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_8
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 335
+        width: 57
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_9
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 335
+        width: 57
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_10
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 335
+        width: 57
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_11
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 335
+        width: 57
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_12
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 271
+        width: 41
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_13
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 312
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_14
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 271
+        width: 41
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_15
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 312
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_16
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 271
+        width: 41
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_17
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 312
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_18
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 271
+        width: 41
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_19
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 312
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_20
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 295
+        width: 36
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_21
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 275
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_22
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 295
+        width: 36
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_23
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 275
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_24
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 295
+        width: 36
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_25
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 275
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_26
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 275
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_27
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 298
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_28
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 230
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_29
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 207
+        width: 50
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_30
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 249
+        width: 13
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_31
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 237
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_32
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 230
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_33
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 207
+        width: 50
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_34
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 249
+        width: 13
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_35
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 240
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_36
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 230
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_37
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 207
+        width: 50
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_38
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 249
+        width: 13
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_39
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 230
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_40
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 231
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_41
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 249
+        width: 13
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_42
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 237
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_43
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 207
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_44
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 223
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_45
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 211
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_46
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 211
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_47
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 211
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_48
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 211
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_49
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 166
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_50
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 132
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_51
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 163
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_52
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 184
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_53
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 166
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_54
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 132
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_55
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 163
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_56
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 184
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_57
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 166
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_58
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 132
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_59
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 163
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_60
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 184
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_61
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 166
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_62
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 157
+        width: 50
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_63
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 163
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_64
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 184
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_65
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 155
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_66
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 143
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_67
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 147
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_68
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 147
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_69
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 147
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_70
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 147
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_71
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 147
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_72
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 102
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_73
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 99
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_74
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 111
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_75
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 103
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_76
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 79
+        width: 50
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_77
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 99
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_78
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 111
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_79
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 103
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_80
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 99
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_81
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 111
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_82
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 103
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_83
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 103
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_84
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 79
+        width: 50
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_85
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 79
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_86
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 93
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_87
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 101
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_88
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 94
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_89
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 95
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_90
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 95
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_91
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 91
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_92
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 96
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_93
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 83
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_94
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 83
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_95
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 83
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_96
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 83
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_97
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 83
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_98
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 79
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_99
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 83
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_100
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 39
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_101
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 33
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_102
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 39
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_103
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 31
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_104
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 39
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_105
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 39
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_106
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 31
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_107
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 39
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_108
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 32
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_109
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 31
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_110
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 39
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_111
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 32
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_112
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 31
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_113
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 32
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_114
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 30
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_115
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 31
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_116
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 32
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_117
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 15
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_118
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 30
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_119
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 15
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_120
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 30
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_121
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 15
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_122
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 30
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_123
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 15
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_124
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 19
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_125
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 19
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_126
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 25
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_127
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 20
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_128
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 20
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_129
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 19
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_130
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 19
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_131
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 19
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ogre-death_132
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 19
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

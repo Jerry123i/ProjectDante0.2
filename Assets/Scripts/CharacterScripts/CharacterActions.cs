@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CharacterActions : MonoBehaviour {
 
+    public float coldowDoMelee;
+    public float duracaoDaHitBoxDoMelee;
+
     public bool spearOn, onMeleeCd;
     float speed, teleport, turnSpeed, countMelee;
     public Sprite spriteSemLanca;
@@ -85,22 +88,27 @@ public class CharacterActions : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0) && !onMeleeCd)
         {
-            meleeHit.GetComponent<BoxCollider2D>().enabled = true;
+            meleeHit.GetComponent<PolygonCollider2D>().enabled = true;
+            meleeHit.GetComponent<SpriteRenderer>().enabled = true;
             onMeleeCd = true;
         }
 
         if (onMeleeCd && countMelee > 0)
         {
             countMelee -= Time.deltaTime;
-            Debug.Log(countMelee);
+        }
+
+        if (countMelee <= coldowDoMelee-duracaoDaHitBoxDoMelee)
+        {            
+            meleeHit.GetComponent<PolygonCollider2D>().enabled = false;
+            meleeHit.GetComponent<SpriteRenderer>().enabled = false;
         }
 
         if (countMelee <= 0)
         {
-            countMelee = 2.0f;
+            countMelee = coldowDoMelee;
             onMeleeCd = false;
-            meleeHit.GetComponent<BoxCollider2D>().enabled = false;
-        }
+        } 
 
     }
 

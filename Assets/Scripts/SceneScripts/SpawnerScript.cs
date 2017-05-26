@@ -6,7 +6,11 @@ public class SpawnerScript : MonoBehaviour
 {
 
     public GameObject[] spawners;
+    GameObject HotSpawner;
     public GameObject enemy;
+
+    public Sprite pitCold;
+    public Sprite pitHot;
 
     GameObject instance;
 
@@ -35,6 +39,9 @@ public class SpawnerScript : MonoBehaviour
             activeSpawning = true;
             waves++;
             nToSpawn = EnemiesPerWave(waves);
+            HotSpawner = spawners[Random.Range(0, spawners.Length)];
+            HotSpawner.GetComponent<SpriteRenderer>().sprite = pitHot;
+
         }
 
         if (activeSpawning)
@@ -43,10 +50,19 @@ public class SpawnerScript : MonoBehaviour
             {
                 if (spawnCDClock>= 1.0f)
                 {
-                    instance = Instantiate(enemy, spawners[Random.Range(0, spawners.Length)].transform.position, Quaternion.Euler(Vector3.zero));
+                    instance = Instantiate(enemy, HotSpawner.transform.position, Quaternion.Euler(Vector3.zero));
                     instance.GetComponent<EnemyController>().moveSpeed *= MultiplierPerTime(totalTime);
                     spawnCDClock = 0f;
                     nToSpawn--;
+
+                    HotSpawner.GetComponent<SpriteRenderer>().sprite = pitCold;
+
+                    if (nToSpawn > 0)
+                    {
+                        HotSpawner = spawners[Random.Range(0, spawners.Length)];
+                        HotSpawner.GetComponent<SpriteRenderer>().sprite = pitHot;
+                    }
+
                 }
 
                 else

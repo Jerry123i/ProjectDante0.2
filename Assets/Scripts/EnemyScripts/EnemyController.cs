@@ -23,9 +23,6 @@ public class EnemyController : MonoBehaviour {
     void FixedUpdate()
     {
 
-        //Vector3 varLookat = enemy.transform.LookAt (player);
-        //Vector2 direcaoPlayer = (varLookat);// , varLookat.y);
-
         float xPos = player.position.x - enemy.position.x;
         float yPos = player.position.y - enemy.position.y;
         float norm = Mathf.Sqrt(xPos * xPos + yPos * yPos);
@@ -34,26 +31,18 @@ public class EnemyController : MonoBehaviour {
 
         Vector3 position = new Vector3(xPosNormalized, yPosNormalized, 0);
 
-
-        //enemy.transform.LookAt(player);
+        //transform.up = (player.position - this.transform.position).normalized;
 
         if (Vector2.Distance(enemy.transform.position, player.position) > minDist)
         {
             enemy.transform.Translate(position * moveSpeed * Time.deltaTime);
         }
+
+        
+
+        
+        
     }
 
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player")) {
-            
-        }
-    }
-
-    void die()
-    {
-        // funcao de morte
-    }
-
+   
 }

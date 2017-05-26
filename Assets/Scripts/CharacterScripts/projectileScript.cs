@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class projectileScript : MonoBehaviour {
 
+    public int danoDaLanca;
     public float speed;
     public Transform thisTransform;
-    BoxCollider2D collider;
     bool isProjectile;
     public int nOfHits;
     GameObject watcher;
     public AudioClip hitSound;
+    public AudioClip pickupSound;
     
 	void Start () {
         nOfHits = 0;
         isProjectile = true;
-        collider = GetComponent<BoxCollider2D>();
         watcher = GameObject.FindGameObjectWithTag("Watcher");
 	}
 	
@@ -45,7 +45,10 @@ public class projectileScript : MonoBehaviour {
 
             if (collisionTrig.gameObject.tag == "Enemy")
             {
-                nOfHits++;
+                if (collisionTrig.gameObject.GetComponent<EnemyHealth>().currentHealth <= danoDaLanca)
+                {
+                    nOfHits++;
+                }
 
                 if (nOfHits == 1)
                 {
@@ -56,7 +59,7 @@ public class projectileScript : MonoBehaviour {
                     watcher.GetComponent<GameOverScript>().hype += Mathf.Pow(3, (nOfHits-1));
                 }
 
-                collisionTrig.gameObject.GetComponent<EnemyHealth>().Damage(1);
+                collisionTrig.gameObject.GetComponent<EnemyHealth>().Damage(danoDaLanca);
                 this.GetComponent<AudioSource>().pitch = 1 + ((nOfHits+1) * 0.5f);
                 this.GetComponent<AudioSource>().PlayOneShot(hitSound, 1.0f);
 
@@ -70,6 +73,7 @@ public class projectileScript : MonoBehaviour {
             if (collisionTrig.gameObject.tag == "Player")
             {
                 collisionTrig.gameObject.GetComponent<CharacterActions>().spearOn = true;
+                GameObject.FindGameObjectWithTag("Watcher").GetComponent<AudioSource>().PlayOneShot(pickupSound, 0.4f);
                 Destroy(this.gameObject);               
             }
         }
