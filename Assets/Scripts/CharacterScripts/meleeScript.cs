@@ -22,7 +22,10 @@ public class meleeScript : MonoBehaviour {
         {
             collision.gameObject.GetComponent<EnemyHealth>().Damage(danoDoMelee);            
             collision.gameObject.GetComponent<EnemyHealth>().onMeleeHit = true;
-            
+            collision.gameObject.GetComponent<EnemyHealth>().meleeEvents = true;
+
+            collision.gameObject.GetComponent<EnemyHealth>().speed = 0;
+            collision.gameObject.GetComponent<Rigidbody2D>().mass = 1;
             collision.gameObject.GetComponent<Rigidbody2D>().WakeUp();
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce((collision.transform.localPosition - GameObject.FindGameObjectWithTag("Player").transform.localPosition ).normalized * 8, ForceMode2D.Impulse);
             GameObject.FindGameObjectWithTag("Watcher").GetComponent<AudioSource>().PlayOneShot(audioMelee, 0.3f);

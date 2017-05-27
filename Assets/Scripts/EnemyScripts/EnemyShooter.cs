@@ -25,6 +25,8 @@ public class EnemyShooter : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        rangedMoveSpeed = this.GetComponent<EnemyHealth>().speed;
+
         float xPos = playerTransform.position.x - enemyRigidBody2D.transform.position.x;
         float yPos = playerTransform.position.y - enemyRigidBody2D.transform.position.y;
         float norm = Mathf.Sqrt(xPos * xPos + yPos * yPos);

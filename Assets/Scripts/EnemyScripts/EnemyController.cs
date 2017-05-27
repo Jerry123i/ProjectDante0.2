@@ -9,7 +9,7 @@ public class EnemyController : MonoBehaviour {
     public Transform player;
     private float minDist = 0.5f;
 
-
+    Vector3 rotateTarget;
     
     public float moveSpeed;
 
@@ -23,25 +23,28 @@ public class EnemyController : MonoBehaviour {
     void FixedUpdate()
     {
 
-        float xPos = player.position.x - enemy.position.x;
-        float yPos = player.position.y - enemy.position.y;
-        float norm = Mathf.Sqrt(xPos * xPos + yPos * yPos);
-        float xPosNormalized = xPos / norm;
-        float yPosNormalized = yPos / norm;
+         moveSpeed = this.GetComponent<EnemyHealth>().speed;
 
-        Vector3 position = new Vector3(xPosNormalized, yPosNormalized, 0);
+         float xPos = player.position.x - enemy.position.x;
+         float yPos = player.position.y - enemy.position.y;
+         float norm = Mathf.Sqrt(xPos * xPos + yPos * yPos);
+         float xPosNormalized = xPos / norm;
+         float yPosNormalized = yPos / norm;
 
-        //transform.up = (player.position - this.transform.position).normalized;
-
-        if (Vector2.Distance(enemy.transform.position, player.position) > minDist)
-        {
-            enemy.transform.Translate(position * moveSpeed * Time.deltaTime);
-        }
-
+         Vector3 vetorDirecao = new Vector3(xPosNormalized, yPosNormalized, 0);
         
+         if (Vector2.Distance(enemy.transform.position, player.position) > minDist)
+         {
+             enemy.transform.Translate(vetorDirecao * moveSpeed * Time.deltaTime, Space.World);
+         }
 
-        
-        
+
+        rotateTarget.Set(player.localPosition.x, player.localPosition.y, -10.0f);
+        Quaternion rot = Quaternion.LookRotation(transform.position - rotateTarget, Vector3.forward);
+        transform.rotation = rot;
+        transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z);
+
+
     }
 
    

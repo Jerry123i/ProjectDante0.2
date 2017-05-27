@@ -9,16 +9,26 @@ public class EnemyHealth : MonoBehaviour {
     public int totalHealth; 
     public int currentHealth;
 
+    public float initialSpeed;
+    public float speed;
+
     public Sprite spriteNormal;
     public Sprite spriteInjured;
 
     public bool onMeleeHit;
+    public bool meleeEvents;
     public float hitCD;
-    public float meleeClock;
+
+    float meleeClock;
+    bool skipOneFrame = false;
+
+    public float slipTime;
 
     void Start() {
+
         currentHealth = totalHealth; // Começa dando a vida específica total do monstro para a vida atual
-        meleeClock = hitCD;
+        speed = initialSpeed;
+        meleeClock = 0;
         onMeleeHit = false;
                    
     }
@@ -30,7 +40,7 @@ public class EnemyHealth : MonoBehaviour {
             this.GetComponent<SpriteRenderer>().sprite = spriteInjured;
         }       
 
-        if (onMeleeHit)
+        if (meleeEvents)
         {
             RunClock();
         }
@@ -52,14 +62,51 @@ public class EnemyHealth : MonoBehaviour {
 
     void RunClock()
     {
-        meleeClock -= Time.deltaTime;
+        meleeClock += Time.deltaTime;               
 
-        if (meleeClock <= 0)
+        if (meleeClock >= hitCD) //Restaura estado normal quando tempo zera
         {
             onMeleeHit = false;
-            meleeClock = hitCD;
+        }
+
+        if (skipOneFrame)
+        {
+            this.GetComponent<Rigidbody2D>().drag = 1f;
+            this.GetComponent<Rigidbody2D>().mass = 1000000f;
+        }
+
+        if (meleeClock >= slipTime) //Momento de parada
+        {
+            this.GetComponent<Rigidbody2D>().drag = 1000000f;
+            skipOneFrame = true;
+
+            speed = (meleeClock - slipTime) * 0.7f; //Resauracao de velocidade
+
+            if (speed>= initialSpeed) 
+            {
+                speed = initialSpeed;
+            }
+
+        }
+
+        if (meleeClock > hitCD && speed == initialSpeed)
+        {
+            meleeClock = 0;
+            meleeEvents = false;
         }
     }
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "Enemy" && coll.gameObject.GetComponent<EnemyHealth>().meleeEvents)
+        {
+            meleeEvents = true;
+            GetComponent<Rigidbody2D>().mass = 1f;
+            this.gameObject.GetComponent<Rigidbody2D>().AddForce((this.transform.localPosition - coll.transform.localPosition).normalized * 4, ForceMode2D.Impulse);
+        }
+    }
+
+  
 
 
 }
