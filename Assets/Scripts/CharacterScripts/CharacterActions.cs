@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterActions : MonoBehaviour {
 
     public float coldowDoMelee;
     public float duracaoDaHitBoxDoMelee;
+
+    public Image CdImage;
 
     public bool spearOn, onMeleeCd;
     float speed, teleport, turnSpeed, countMelee;
@@ -96,6 +99,7 @@ public class CharacterActions : MonoBehaviour {
         if (onMeleeCd && countMelee > 0)
         {
             countMelee -= Time.deltaTime;
+            CdImage.fillAmount = (coldowDoMelee - countMelee) / coldowDoMelee;
         }
 
         if (countMelee <= coldowDoMelee-duracaoDaHitBoxDoMelee)
@@ -107,6 +111,7 @@ public class CharacterActions : MonoBehaviour {
         if (countMelee <= 0)
         {
             countMelee = coldowDoMelee;
+            CdImage.fillAmount = 0f;
             onMeleeCd = false;
         } 
 

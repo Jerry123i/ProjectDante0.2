@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour {
 
     public AudioClip deathSound;
-
+    
     public int totalHealth; 
     public int currentHealth;
 
