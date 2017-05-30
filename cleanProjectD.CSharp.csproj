@@ -76,6 +76,7 @@
   <ItemGroup>
     <Compile Include="Assets\ColdownImageScript.cs" />
     <Compile Include="Assets\CrowdScript.cs" />
+    <Compile Include="Assets\CutsceneScript.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\CharacterActions.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\meleeScript.cs" />
