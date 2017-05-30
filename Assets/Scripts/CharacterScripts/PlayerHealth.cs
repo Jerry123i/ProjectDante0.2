@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour {
 
     public int totalHealth = 4;
     public int currentHealth;
-    int destroy = 1;
+    public int destroy = 1;
     public Image sangue;
     AudioSource playerAudioSource;
     bool travar;
@@ -22,7 +22,7 @@ public class PlayerHealth : MonoBehaviour {
         normalColor = this.GetComponent<Renderer>().material.color;
     }
 
-    IEnumerator afterDamage()
+    public IEnumerator afterDamage()
     {
         invunerable = true;
         this.GetComponent<Renderer>().material.color = collideColor;
@@ -44,7 +44,7 @@ public class PlayerHealth : MonoBehaviour {
         invunerable = false;
     }
 
-    void Damage() {
+    public void Damage() {
         if (invunerable == false)
         {
             currentHealth--;
@@ -68,10 +68,11 @@ public class PlayerHealth : MonoBehaviour {
             playerAudioSource.Play();
         }
         
-
+		/*
         if (currentHealth <= 0) {
             Application.LoadLevel("Game Over");
         }
+        */
     }
 
     void Heal() {
@@ -81,7 +82,7 @@ public class PlayerHealth : MonoBehaviour {
     }
 
     void OnCollisionEnter2D(Collision2D coll) {
-        if (coll.gameObject.tag == "Enemy") {
+        if (coll.gameObject.tag == "Enemy" || coll.gameObject.tag == "Hazard") {
             Damage();
             if(invunerable == false) StartCoroutine(afterDamage());
         }

@@ -18,7 +18,7 @@ public class meleeScript : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy" && !collision.gameObject.GetComponent<EnemyHealth>().onMeleeHit)
+		if ((collision.gameObject.tag == "Enemy" ||collision.gameObject.tag == "Boss")  && !collision.gameObject.GetComponent<EnemyHealth>().onMeleeHit)
         {
             collision.gameObject.GetComponent<EnemyHealth>().Damage(danoDoMelee);            
             collision.gameObject.GetComponent<EnemyHealth>().onMeleeHit = true;

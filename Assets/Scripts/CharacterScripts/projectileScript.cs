@@ -7,7 +7,7 @@ public class projectileScript : MonoBehaviour {
     public int danoDaLanca;
     public float speed;
     public Transform thisTransform;
-    bool isProjectile;
+    public bool isProjectile;
     public int nOfHits;
     GameObject watcher;
     public AudioClip hitSound;
@@ -24,6 +24,10 @@ public class projectileScript : MonoBehaviour {
         if (isProjectile){
             thisTransform.Translate(Vector3.up * speed);
         }
+
+		if (this.transform.position == new Vector3 (0, -0.045f, 0) && this.transform.rotation.x == 0 && this.transform.rotation.y == 0 && this.transform.rotation.z == 0 && this.speed == 0) {
+			isProjectile = false;
+		}
 	}
 
 
@@ -34,7 +38,9 @@ public class projectileScript : MonoBehaviour {
         {
             if (collisionTrig.gameObject.tag == "Wall")
             {
-                isProjectile = false;
+				this.speed = 0;
+				isProjectile = false;
+				this.tag = "Projectile";
 
                 if (nOfHits >= 2)
                 {
@@ -43,7 +49,7 @@ public class projectileScript : MonoBehaviour {
 
             }
 
-            if (collisionTrig.gameObject.tag == "Enemy")
+			if (collisionTrig.gameObject.tag == "Enemy" || collisionTrig.gameObject.tag == "Boss")
             {
                 if (collisionTrig.gameObject.GetComponent<EnemyHealth>().currentHealth <= danoDaLanca)
                 {
@@ -65,6 +71,13 @@ public class projectileScript : MonoBehaviour {
 
             }
 
+			if (collisionTrig.gameObject.tag == "Player") {
+				if (this.tag == "Enemy Projectile") {
+					collisionTrig.GetComponent<PlayerHealth> ().Damage ();
+					if (collisionTrig.GetComponent<PlayerHealth> ().invunerable == false)
+						StartCoroutine (collisionTrig.GetComponent<PlayerHealth> ().afterDamage ());
+				}
+			}
         }
 
 
@@ -76,6 +89,12 @@ public class projectileScript : MonoBehaviour {
                 GameObject.FindGameObjectWithTag("Watcher").GetComponent<AudioSource>().PlayOneShot(pickupSound, 0.4f);
                 Destroy(this.gameObject);               
             }
+
+			if (collisionTrig.gameObject.tag == "Boss") {
+				collisionTrig.gameObject.GetComponent<BossController> ().spearOn = true;
+				GameObject.FindGameObjectWithTag ("Watcher").GetComponent<AudioSource> ().PlayOneShot (pickupSound, 0.4f);
+				Destroy (this.gameObject);
+			}
         }
     }
 }

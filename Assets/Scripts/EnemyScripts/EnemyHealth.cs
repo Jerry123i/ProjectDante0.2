@@ -35,7 +35,7 @@ public class EnemyHealth : MonoBehaviour {
 
     void Update()
     {
-        if (currentHealth == 1)
+		if (currentHealth == 1 && this.gameObject.tag == "Enemy")
         {
             this.GetComponent<SpriteRenderer>().sprite = spriteInjured;
         }       

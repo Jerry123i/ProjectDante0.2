@@ -8,9 +8,7 @@ public class CharacterActions : MonoBehaviour {
     public float coldowDoMelee;
     public float duracaoDaHitBoxDoMelee;
 
-    public Image CdImage;
-
-    public bool spearOn, onMeleeCd;
+    public bool spearOn, onMeleeCd; 	
     float speed, teleport, turnSpeed, countMelee;
     public Sprite spriteSemLanca;
     public Sprite spriteLanca;
@@ -21,6 +19,15 @@ public class CharacterActions : MonoBehaviour {
     Vector3 mousePosition;
     bool invalidTeleport = false;
     private GameObject[] walls;
+    public float limitex, limite_x, limitey, limite_y;
+    public bool cooldown = false;
+    public float timer = 0;
+    Sprite original;
+    public Sprite teleporte;
+    public AudioSource teleporteSound;
+    bool travar;
+
+	public Image CdImage;
 
 	void Start () {
         this.spearOn = true;
@@ -30,7 +37,9 @@ public class CharacterActions : MonoBehaviour {
         this.teleport = 100f;
         this.turnSpeed = 10000000f;
         walls = GameObject.FindGameObjectsWithTag("Wall");
-	}
+        original = this.gameObject.GetComponent<SpriteRenderer>().sprite;
+        travar = GameObject.Find("Controlador").GetComponent<pauseMenu>().paused;
+    }
 	
     void Moving() {
         if (Input.GetKey(KeyCode.A))
@@ -62,22 +71,27 @@ public class CharacterActions : MonoBehaviour {
     }
 
     void Teleporting () {
-        if (Input.GetKey(KeyCode.A) && Input.GetKeyDown(KeyCode.Space))
+
+        if (Input.GetKey(KeyCode.A))
             this.transform.position += new Vector3(this.transform.position.x + (- teleport) , 0, 0) * Time.deltaTime;
-        else if (Input.GetKey(KeyCode.D) && Input.GetKeyDown(KeyCode.Space))
+        else if (Input.GetKey(KeyCode.D))
             this.transform.position += new Vector3(this.transform.position.x + (+ teleport), 0, 0) * Time.deltaTime;
-        else if (Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.Space))
+        else if (Input.GetKey(KeyCode.W))
             this.transform.position += new Vector3(0, this.transform.position.y + (+ teleport), 0) * Time.deltaTime;
-        else if (Input.GetKey(KeyCode.S) && Input.GetKeyDown(KeyCode.Space))
+        else if (Input.GetKey(KeyCode.S))
             this.transform.position += new Vector3(0, this.transform.position.y + (- teleport), 0) * Time.deltaTime;
-        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A) && Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
             this.transform.position += new Vector3(this.transform.position.x + (- teleport), this.transform.position.y + ( + teleport), 0) * Time.deltaTime;
-        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D) && Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
             this.transform.position += new Vector3(this.transform.position.x + (+ teleport), this.transform.position.y + (+ teleport), 0) * Time.deltaTime;
-        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D) && Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
             this.transform.position += new Vector3(this.transform.position.x + (+ teleport), this.transform.position.y + (- teleport), 0) * Time.deltaTime;
-        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A) && Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
             this.transform.position += new Vector3(this.transform.position.x + (- teleport), this.transform.position.y + (- teleport), 0) * Time.deltaTime;
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = teleporte;
+        teleporteSound.Play();
+        cooldown = true;
+        timer = 0;
     }
 
     void Shooting() {
@@ -89,31 +103,32 @@ public class CharacterActions : MonoBehaviour {
 
     void Melee()
     {
-        if (Input.GetMouseButtonDown(0) && !onMeleeCd)
-        {
-            meleeHit.GetComponent<PolygonCollider2D>().enabled = true;
-            meleeHit.GetComponent<SpriteRenderer>().enabled = true;
-            onMeleeCd = true;
-        }
+		if (Input.GetMouseButtonDown(0) && !onMeleeCd)
+		{
+			meleeHit.GetComponent<PolygonCollider2D>().enabled = true;
+			meleeHit.GetComponent<SpriteRenderer>().enabled = true;
+			onMeleeCd = true;
+		}
 
-        if (onMeleeCd && countMelee > 0)
-        {
-            countMelee -= Time.deltaTime;
-            CdImage.fillAmount = (coldowDoMelee - countMelee) / coldowDoMelee;
-        }
+		if (onMeleeCd && countMelee > 0)
+		{
+			countMelee -= Time.deltaTime;
+			CdImage.fillAmount = (coldowDoMelee - countMelee) / coldowDoMelee;
+		}
 
-        if (countMelee <= coldowDoMelee-duracaoDaHitBoxDoMelee)
-        {            
-            meleeHit.GetComponent<PolygonCollider2D>().enabled = false;
-            meleeHit.GetComponent<SpriteRenderer>().enabled = false;
-        }
+		if (countMelee <= coldowDoMelee-duracaoDaHitBoxDoMelee)
+		{            
+			meleeHit.GetComponent<PolygonCollider2D>().enabled = false;
+			meleeHit.GetComponent<SpriteRenderer>().enabled = false;
+		}
 
-        if (countMelee <= 0)
-        {
-            countMelee = coldowDoMelee;
-            CdImage.fillAmount = 0f;
-            onMeleeCd = false;
-        } 
+		if (countMelee <= 0)
+		{
+			countMelee = coldowDoMelee;
+			CdImage.fillAmount = 0f;
+			onMeleeCd = false;
+		} 
+
 
     }
 
@@ -130,11 +145,35 @@ public class CharacterActions : MonoBehaviour {
 
     }
 
-	void Update () {
-        Moving ();
-        Melee();
-        Teleporting ();
-        Shooting ();
-        SetSprite();
-	}
+    void Update() {
+        travar = GameObject.Find("Controlador").GetComponent<pauseMenu>().paused;
+        if (travar == false) {
+            Moving();
+            Melee();
+            Shooting();
+            SetSprite();
+
+            if (Input.GetKeyDown(KeyCode.Space) && cooldown == false)
+                Teleporting();
+
+            timer += Time.deltaTime;
+
+            if (timer >= 1) {
+                this.gameObject.GetComponent<SpriteRenderer>().sprite = original;
+            }
+
+            if (timer >= 3)
+                cooldown = false;
+
+
+            if (this.transform.position.x > limitex)
+                this.transform.position -= new Vector3(this.transform.position.x - limitex, 0, 0);
+            if (this.transform.position.x < limite_x)
+                this.transform.position -= new Vector3(this.transform.position.x - limite_x, 0, 0);
+            if (this.transform.position.y > limitey)
+                this.transform.position -= new Vector3(0, this.transform.position.y - limitey, 0);
+            if (this.transform.position.y < limite_y)
+                this.transform.position -= new Vector3(0, this.transform.position.y - limite_y, 0);
+        }
+    }
 }

@@ -51,7 +51,7 @@ public class SpawnerScript : MonoBehaviour
                 if (spawnCDClock>= 1.0f)
                 {
                     instance = Instantiate(enemy, HotSpawner.transform.position, Quaternion.Euler(Vector3.zero));
-                    instance.GetComponent<EnemyController>().moveSpeed *= MultiplierPerTime(totalTime);
+					instance.GetComponent<EnemyHealth>().initialSpeed *= MultiplierPerTime(totalTime);
                     spawnCDClock = 0f;
                     nToSpawn--;
 
@@ -124,22 +124,22 @@ public class SpawnerScript : MonoBehaviour
 
         else if (time < 16.0f)
         {
-            return 1.0f;
+            return 1.7f;
         }
 
         else if (time < 24.0f)
         {
-            return 1.3f;
+            return 1.8f;
         }
 
         else if (time < 32.0f)
         {
-            return 1.5f;
+            return 2.0f;
         }
 
         else
         {
-            return 1.8f;
+            return 2.9f;
         }
     }
         
