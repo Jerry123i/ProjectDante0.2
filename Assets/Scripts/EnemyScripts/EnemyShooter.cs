@@ -14,6 +14,8 @@ public class EnemyShooter : MonoBehaviour
     private bool canShoot = true;
     Transform enemyProjectileTransform;
 
+    Vector3 rotateTarget;
+
     // Use this for initialization
     void Start()
     {
@@ -51,6 +53,13 @@ public class EnemyShooter : MonoBehaviour
 
         enemyAim.transform.LookAt(playerTransform);
         enemyAim.transform.up = playerTransform.position - enemyAim.transform.position;
+
+        //Rotacao
+        rotateTarget.Set(playerTransform.localPosition.x, playerTransform.localPosition.y, -10.0f);
+        Quaternion rot = Quaternion.LookRotation(transform.position - rotateTarget, Vector3.forward);
+        transform.rotation = rot;
+        transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z);
+
     }
 
     IEnumerator afterShoot()

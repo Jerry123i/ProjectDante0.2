@@ -24,17 +24,33 @@ public class EnemyHealth : MonoBehaviour {
 
     public float slipTime;
 
+    public float debugClock;
+    public bool balancing;
+
     void Start() {
 
         currentHealth = totalHealth; // Começa dando a vida específica total do monstro para a vida atual
         speed = initialSpeed;
         meleeClock = 0;
+        debugClock = 0;
         onMeleeHit = false;
                    
     }
 
     void Update()
     {
+        //Verificador periódico da situação de movimento físico
+        debugClock += Time.deltaTime;
+        if (debugClock >= 3)
+        {
+            if (!meleeEvents){
+                balancing = true;
+            }
+            debugClock = 0;
+        }
+
+
+
 		if (currentHealth == 1 && this.gameObject.tag == "Enemy")
         {
             this.GetComponent<SpriteRenderer>().sprite = spriteInjured;
@@ -43,6 +59,11 @@ public class EnemyHealth : MonoBehaviour {
         if (meleeEvents)
         {
             RunClock();
+        }
+
+        if (balancing)
+        {
+            RandomPhysicRestaurer();
         }
     
     }
@@ -72,19 +93,23 @@ public class EnemyHealth : MonoBehaviour {
         if (skipOneFrame)
         {
             this.GetComponent<Rigidbody2D>().drag = 1f;
-            this.GetComponent<Rigidbody2D>().mass = 1000000f;
+            this.GetComponent<Rigidbody2D>().mass = 1000000f;            
         }
 
         if (meleeClock >= slipTime) //Momento de parada
         {
+           // RestaurarFisica();
             this.GetComponent<Rigidbody2D>().drag = 1000000f;
+            
             skipOneFrame = true;
 
-            speed = (meleeClock - slipTime) * 0.7f; //Resauracao de velocidade
+            speed = (meleeClock - slipTime) * (initialSpeed/(slipTime/2)); //Restauracao de velocidade
 
             if (speed>= initialSpeed) 
             {
                 speed = initialSpeed;
+                this.GetComponent<Rigidbody2D>().drag = 0;
+                //balancing = true;
             }
 
         }
@@ -93,6 +118,7 @@ public class EnemyHealth : MonoBehaviour {
         {
             meleeClock = 0;
             meleeEvents = false;
+            skipOneFrame = false;
         }
     }
 
@@ -100,9 +126,39 @@ public class EnemyHealth : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Enemy" && coll.gameObject.GetComponent<EnemyHealth>().meleeEvents)
         {
-            meleeEvents = true;
+            if (!meleeEvents)
+            {
+                meleeEvents = true;
+            }
+            else
+            {
+                
+            }
+            speed = 0;
             GetComponent<Rigidbody2D>().mass = 1f;
             this.gameObject.GetComponent<Rigidbody2D>().AddForce((this.transform.localPosition - coll.transform.localPosition).normalized * 4, ForceMode2D.Impulse);
+        }
+    }    
+
+    public void RandomPhysicRestaurer()
+    {
+        if (balancing)
+        {
+            if (this.GetComponent<Rigidbody2D>().drag == 1000000f && this.GetComponent<Rigidbody2D>().mass == 1f)
+            {
+                this.GetComponent<Rigidbody2D>().mass = 1000000f;
+                this.GetComponent<Rigidbody2D>().drag = 0f;
+                this.speed = initialSpeed;
+                balancing = false;
+            }
+
+            if (balancing)
+            {
+                this.speed = 0;
+                this.GetComponent<Rigidbody2D>().mass = 1f;
+                this.GetComponent<Rigidbody2D>().drag = 1000000f;
+            }
+            
         }
     }
 

@@ -22,7 +22,10 @@ public class meleeScript : MonoBehaviour {
         {
             collision.gameObject.GetComponent<EnemyHealth>().Damage(danoDoMelee);            
             collision.gameObject.GetComponent<EnemyHealth>().onMeleeHit = true;
-            collision.gameObject.GetComponent<EnemyHealth>().meleeEvents = true;
+            if (!collision.gameObject.GetComponent<EnemyHealth>().meleeEvents)
+            {
+                collision.gameObject.GetComponent<EnemyHealth>().meleeEvents = true;
+            }
 
             collision.gameObject.GetComponent<EnemyHealth>().speed = 0;
             collision.gameObject.GetComponent<Rigidbody2D>().mass = 1;

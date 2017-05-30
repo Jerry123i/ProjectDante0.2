@@ -74,14 +74,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ColdownImageScript.cs" />
-    <Compile Include="Assets\CrowdScript.cs" />
-    <Compile Include="Assets\CutsceneScript.cs" />
     <Compile Include="Assets\Scenes\LevelControl.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\CharacterActions.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\meleeScript.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\projectileScript.cs" />
+    <Compile Include="Assets\Scripts\ColdownImageScript.cs" />
+    <Compile Include="Assets\Scripts\CrowdScript.cs" />
+    <Compile Include="Assets\Scripts\CutsceneScript.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\BossController.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyHealth.cs" />
@@ -99,6 +99,7 @@
     <Compile Include="Assets\Scripts\SceneScripts\SpawnerScript.cs" />
     <Compile Include="Assets\Scripts\SceneScripts\controladorGameOver.cs" />
     <Compile Include="Assets\Scripts\SceneScripts\pauseMenu.cs" />
+    <Compile Include="Assets\Scripts\TeleporterImageScript.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

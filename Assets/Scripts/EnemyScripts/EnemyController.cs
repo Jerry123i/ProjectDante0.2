@@ -11,7 +11,7 @@ public class EnemyController : MonoBehaviour {
 
     Vector3 rotateTarget;
     
-    public float moveSpeed;
+    float moveSpeed;
 
     // Use this for initialization
     void Start() {

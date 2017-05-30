@@ -19,15 +19,18 @@ public class CharacterActions : MonoBehaviour {
     Vector3 mousePosition;
     bool invalidTeleport = false;
     private GameObject[] walls;
+    
     public float limitex, limite_x, limitey, limite_y;
-    public bool cooldown = false;
-    public float timer = 0;
+    public float teleportCd;
+    public bool isOnTeleportCooldown = false;
+    public float teleportTimer = 0;
     Sprite original;
     public Sprite teleporte;
     public AudioSource teleporteSound;
     bool travar;
 
-	public Image CdImage;
+	public Image cdMeleeImage;
+    public Image cdTeleporterImage;
 
 	void Start () {
         this.spearOn = true;
@@ -90,8 +93,8 @@ public class CharacterActions : MonoBehaviour {
             this.transform.position += new Vector3(this.transform.position.x + (- teleport), this.transform.position.y + (- teleport), 0) * Time.deltaTime;
         this.gameObject.GetComponent<SpriteRenderer>().sprite = teleporte;
         teleporteSound.Play();
-        cooldown = true;
-        timer = 0;
+        isOnTeleportCooldown = true;
+        teleportTimer = 0;
     }
 
     void Shooting() {
@@ -113,7 +116,7 @@ public class CharacterActions : MonoBehaviour {
 		if (onMeleeCd && countMelee > 0)
 		{
 			countMelee -= Time.deltaTime;
-			CdImage.fillAmount = (coldowDoMelee - countMelee) / coldowDoMelee;
+			cdMeleeImage.fillAmount = (coldowDoMelee - countMelee) / coldowDoMelee;
 		}
 
 		if (countMelee <= coldowDoMelee-duracaoDaHitBoxDoMelee)
@@ -125,7 +128,7 @@ public class CharacterActions : MonoBehaviour {
 		if (countMelee <= 0)
 		{
 			countMelee = coldowDoMelee;
-			CdImage.fillAmount = 0f;
+			cdMeleeImage.fillAmount = 0f;
 			onMeleeCd = false;
 		} 
 
@@ -153,17 +156,27 @@ public class CharacterActions : MonoBehaviour {
             Shooting();
             SetSprite();
 
-            if (Input.GetKeyDown(KeyCode.Space) && cooldown == false)
+            if (Input.GetKeyDown(KeyCode.Space) && isOnTeleportCooldown == false)
                 Teleporting();
 
-            timer += Time.deltaTime;
+            teleportTimer += Time.deltaTime;
 
-            if (timer >= 1) {
+            if (isOnTeleportCooldown)
+            {
+                cdTeleporterImage.fillAmount = (teleportCd - teleportTimer) / teleportCd;
+            }
+
+            else
+            {
+                cdTeleporterImage.fillAmount = 0f;
+            }            
+
+            if (teleportTimer >= 1) {
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = original;
             }
 
-            if (timer >= 3)
-                cooldown = false;
+            if (teleportTimer >= teleportCd)
+                isOnTeleportCooldown = false;
 
 
             if (this.transform.position.x > limitex)
