@@ -65,11 +65,11 @@ public class CharacterActions : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
             this.transform.position += ((new Vector3(-speed + 10, speed + 10, 0)).normalized) * speed * Time.deltaTime / 1.2f;
-        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
             this.transform.position += ((new Vector3(speed - 10, speed + 10, 0)).normalized) * speed * Time.deltaTime / 1.2f; 
-        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
             this.transform.position += ((new Vector3(speed - 10, -speed - 10, 0)).normalized) * speed * Time.deltaTime / 1.2f;
-        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
             this.transform.position += ((new Vector3(-speed + 10, -speed - 10, 0)).normalized) * speed * Time.deltaTime / 1.2f;
 
 
@@ -89,17 +89,17 @@ public class CharacterActions : MonoBehaviour {
         else if (Input.GetKey(KeyCode.D))
             this.transform.position += new Vector3(this.transform.position.x + (+ teleport), 0, 0) * Time.deltaTime;
         else if (Input.GetKey(KeyCode.W))
-            this.transform.position += new Vector3(0, this.transform.position.y + (+ teleport), 0) * Time.deltaTime;
+            this.transform.position += new Vector3(0, this.transform.position.y + (+ teleport), 0) * Time.deltaTime ;
         else if (Input.GetKey(KeyCode.S))
             this.transform.position += new Vector3(0, this.transform.position.y + (- teleport), 0) * Time.deltaTime;
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
-            this.transform.position += new Vector3(this.transform.position.x + (- teleport), this.transform.position.y + ( + teleport), 0) * Time.deltaTime;
+            this.transform.position += new Vector3(this.transform.position.x + (- teleport), this.transform.position.y + ( + teleport) * 9, 0) * Time.deltaTime / 10;
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
-            this.transform.position += new Vector3(this.transform.position.x + (+ teleport), this.transform.position.y + (+ teleport), 0) * Time.deltaTime;
+            this.transform.position += new Vector3(this.transform.position.x + (+ teleport), this.transform.position.y + (+ teleport) * 9, 0) * Time.deltaTime / 10;
         if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
-            this.transform.position += new Vector3(this.transform.position.x + (+ teleport), this.transform.position.y + (- teleport), 0) * Time.deltaTime;
+            this.transform.position += new Vector3(this.transform.position.x + (+ teleport), this.transform.position.y + (- teleport) * 9, 0) * Time.deltaTime /10;
         if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
-            this.transform.position += new Vector3(this.transform.position.x + (- teleport), this.transform.position.y + (- teleport), 0) * Time.deltaTime;
+            this.transform.position += new Vector3(this.transform.position.x + (- teleport), this.transform.position.y + (- teleport) * 9, 0) * Time.deltaTime / 10;
         original = this.gameObject.GetComponent<SpriteRenderer>().sprite;
         this.gameObject.GetComponent<SpriteRenderer>().sprite = teleporte;
         teleporteSound.Play();
