@@ -15,11 +15,33 @@ public class PlayerHealth : MonoBehaviour {
     Color collideColor = Color.red;
     Color normalColor;
 
+    float debugClock;
+
     void Start() {
+        debugClock = 0;
         currentHealth = totalHealth;
         playerAudioSource = GetComponent<AudioSource>();
         travar = GameObject.Find("Controlador").GetComponent<pauseMenu>().paused;
         normalColor = this.GetComponent<Renderer>().material.color;
+    }
+
+    void Update()
+    {
+        if (invunerable)
+        {
+            debugClock += Time.deltaTime;
+
+            if (debugClock >= 1f)
+            {
+                invunerable = false;
+                this.GetComponent<Renderer>().material.color = normalColor;
+                debugClock = 0;
+            }
+        }
+        else
+        {
+            debugClock = 0;
+        }
     }
 
     public IEnumerator afterDamage()

@@ -99,6 +99,7 @@
     <Compile Include="Assets\Scripts\SceneScripts\ReturnMenu.cs" />
     <Compile Include="Assets\Scripts\SceneScripts\SelectButton_Actions.cs" />
     <Compile Include="Assets\Scripts\SceneScripts\SpawnerScript.cs" />
+    <Compile Include="Assets\Scripts\SceneScripts\WinCameraScript.cs" />
     <Compile Include="Assets\Scripts\SceneScripts\controladorGameOver.cs" />
     <Compile Include="Assets\Scripts\SceneScripts\pauseMenu.cs" />
     <Compile Include="Assets\Scripts\TeleporterImageScript.cs" />

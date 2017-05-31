@@ -145,27 +145,28 @@ public class CharacterActions : MonoBehaviour {
 
     }
 
-    void SetSprite()
+    public void SetSprite()
     {
         if (spearOn)
         {
-            this.GetComponent<SpriteRenderer>().sprite = spriteLanca;
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = spriteLanca;
         }
         else
         {
-            this.GetComponent<SpriteRenderer>().sprite = spriteSemLanca;
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = spriteSemLanca;
         }
 
     }
 
     void Update() {
 
+        SetSprite();
+
         travar = GameObject.Find("Controlador").GetComponent<pauseMenu>().paused;
         if (travar == false) {
             Moving();
             Melee();
             Shooting();
-            SetSprite();
 
             if (Input.GetKeyDown(KeyCode.Space) && isOnTeleportCooldown == false)
                 Teleporting();

@@ -41,23 +41,37 @@ public class BossController : MonoBehaviour {
 
             projectile = GameObject.FindGameObjectWithTag("Projectile");
 
-            if (projectile.GetComponent<projectileScript>().speed == 0) // corre pra lança
+            if (projectile != null)
             {
+                if (projectile.GetComponent<projectileScript>().speed == 0) // corre pra lança
+                {
 
-                float xPos = projectile.transform.position.x - this.transform.position.x;
-                float yPos = projectile.transform.position.y - this.transform.position.y;
-                float norm = Mathf.Sqrt(xPos * xPos + yPos * yPos);
-                float xPosNormalized = xPos / norm;
-                float yPosNormalized = yPos / norm;
+                    float xPos = projectile.transform.position.x - this.transform.position.x;
+                    float yPos = projectile.transform.position.y - this.transform.position.y;
+                    float norm = Mathf.Sqrt(xPos * xPos + yPos * yPos);
+                    float xPosNormalized = xPos / norm;
+                    float yPosNormalized = yPos / norm;
 
-                Vector3 vetorDirecao = new Vector3(xPosNormalized, yPosNormalized, 0);
-                rotateTarget.Set(projectile.transform.localPosition.x, projectile.transform.localPosition.y, -10.0f);
-                Quaternion rot = Quaternion.LookRotation(transform.position - rotateTarget, Vector3.forward);
-                transform.rotation = rot;
-                transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z);
+                    Vector3 vetorDirecao = new Vector3(xPosNormalized, yPosNormalized, 0);
+                    rotateTarget.Set(projectile.transform.localPosition.x, projectile.transform.localPosition.y, -10.0f);
+                    Quaternion rot = Quaternion.LookRotation(transform.position - rotateTarget, Vector3.forward);
+                    transform.rotation = rot;
+                    transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z);
 
-                this.transform.Translate(vetorDirecao * moveSpeed * Time.deltaTime, Space.World);
+                    this.transform.Translate(vetorDirecao * moveSpeed * Time.deltaTime, Space.World);
+                }
+
+                else // corre pro player
+                {
+                    moveSpeed = this.GetComponent<EnemyHealth>().speed * 2;
+
+                    rotateToPlayer();
+                }
+
+
             }
+
+            
             else // corre pro player
             {
                 moveSpeed = this.GetComponent<EnemyHealth>().speed * 2;

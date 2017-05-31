@@ -27,10 +27,15 @@ public class BossWatcher : MonoBehaviour {
 	void Update () {
 
         thePlayer.GetComponent<CharacterActions>().SetSprite();
-        if (theProjectile.transform.position == new Vector3(0, 0, 0) && theProjectile.GetComponent<projectileScript>().speed == 0 && theProjectile.transform.rotation.x == 0 && theProjectile.transform.rotation.y == 0 && theProjectile.transform.rotation.z == 0)
+
+        if (theProjectile!= null)
         {
-            theProjectile.GetComponent<projectileScript>().isProjectile = false;
+            if (theProjectile.transform.position == new Vector3(0, 0, 0) && theProjectile.GetComponent<projectileScript>().speed == 0 && theProjectile.transform.rotation.x == 0 && theProjectile.transform.rotation.y == 0 && theProjectile.transform.rotation.z == 0)
+            {
+                theProjectile.GetComponent<projectileScript>().isProjectile = false;
+            }
         }
+        
 
         if (theBoss.gameObject == null)
         {
