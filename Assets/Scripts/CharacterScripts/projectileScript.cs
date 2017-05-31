@@ -25,7 +25,7 @@ public class projectileScript : MonoBehaviour {
             thisTransform.Translate(Vector3.up * speed);
         }
 
-		if (this.transform.position == new Vector3 (0, -0.045f, 0) && this.transform.rotation.x == 0 && this.transform.rotation.y == 0 && this.transform.rotation.z == 0 && this.speed == 0) {
+		if (this.transform.position == new Vector3 (0, 0, 0) && this.transform.rotation.x == 0 && this.transform.rotation.y == 0 && this.transform.rotation.z == 0 && this.speed == 0) {
 			isProjectile = false;
 		}
 	}
