@@ -7,7 +7,7 @@ public class CharacterActions : MonoBehaviour {
 
     public float coldowDoMelee;
     public float duracaoDaHitBoxDoMelee;
-
+    
     public bool spearOn, onMeleeCd; 	
     float speed, teleport, turnSpeed, countMelee;
     public Sprite spriteSemLanca;
@@ -75,7 +75,8 @@ public class CharacterActions : MonoBehaviour {
 
         mousePosition = Input.mousePosition;
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        Quaternion rot = Quaternion.LookRotation(transform.position - mousePosition, Vector3.forward);
+        mousePosition.Set(mousePosition.x, mousePosition.y, -100000f);
+        Quaternion rot = Quaternion.LookRotation(transform.localPosition - mousePosition, Vector3.forward);
         transform.rotation = rot;
         transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z);
 
@@ -158,6 +159,7 @@ public class CharacterActions : MonoBehaviour {
     }
 
     void Update() {
+
         travar = GameObject.Find("Controlador").GetComponent<pauseMenu>().paused;
         if (travar == false) {
             Moving();

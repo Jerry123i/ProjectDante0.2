@@ -6,14 +6,14 @@ sceneSetups:
   isLoaded: 0
   isActive: 0
 - path: Assets/Scenes/CameraTests.unity
-  isLoaded: 1
-  isActive: 1
+  isLoaded: 0
+  isActive: 0
 - path: Assets/Scenes/Creditos.unity
   isLoaded: 0
   isActive: 0
 - path: Assets/Scenes/StageOne.unity
-  isLoaded: 0
-  isActive: 0
+  isLoaded: 1
+  isActive: 1
 - path: Assets/Scenes/Menu.unity
   isLoaded: 0
   isActive: 0

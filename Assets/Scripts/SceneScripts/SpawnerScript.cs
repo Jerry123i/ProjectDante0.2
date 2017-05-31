@@ -53,7 +53,14 @@ public class SpawnerScript : MonoBehaviour
                 if (spawnCDClock>= 1.0f)
                 {
                     instance = Instantiate(enemies[spawnList[nToSpawn-1]], HotSpawner.transform.position, Quaternion.Euler(Vector3.zero));
-					instance.GetComponent<EnemyHealth>().initialSpeed *= MultiplierPerTime(totalTime);
+					
+                    if(instance.GetComponent<EnemyHealth>() != null)
+                    {
+                        instance.GetComponent<EnemyHealth>().initialSpeed *= MultiplierPerTime(totalTime);
+                        instance.GetComponent<EnemyHealth>().initialSpeed += Random.Range(-0.5f, 0.5f);
+                        instance.GetComponent<EnemyHealth>().slipTime += Random.Range(-0.1f, 0.6f);
+                    }
+
                     spawnCDClock = 0f;
                     nToSpawn--;
 
@@ -109,11 +116,11 @@ public class SpawnerScript : MonoBehaviour
                 break;
 
             case 5:
-                retornavel = new int[5] { 0, 0, 0, 0 ,1};
+                retornavel = new int[6] {2, 0, 0, 0, 0 ,1};
                 break;
 
             case 6:
-                retornavel = new int[6] { 2, 0, 1, 0 , 1, 0};
+                retornavel = new int[5] {0, 1, 0 , 1, 0};
                 break;
 
             case 7:
@@ -131,63 +138,34 @@ public class SpawnerScript : MonoBehaviour
 
     int EnemiesPerWave(int currentWave)
     {
-
-        return WhatToSpawn(currentWave).Length;
-
-       /* switch (currentWave)
-        {
-            case 1:
-                return 3;
-
-            case 2:
-                return 4;
-
-            case 3:
-                return 4;
-
-            case 4:
-                return 5;
-
-            case 5:
-                return 6;
-
-            default:
-                if (currentWave < 10)
-                {
-                    return 6;
-                }
-                else
-                {
-                    return (7 + Mathf.FloorToInt(((currentWave - 10) / 6)));
-                }
-        }*/
+        return WhatToSpawn(currentWave).Length;        
     }
 
     float MultiplierPerTime(float time)
     {
         if (time < 8.0f)
         {
-            return 0.8f;
+            return 1f;
         }
 
         else if (time < 16.0f)
         {
-            return 1.7f;
+            return 1.3f;
         }
 
         else if (time < 24.0f)
         {
-            return 1.8f;
+            return 1.4f;
         }
 
         else if (time < 32.0f)
         {
-            return 2.0f;
+            return 1.8f;
         }
 
         else
         {
-            return 2.9f;
+            return 2.0f;
         }
     }
         
