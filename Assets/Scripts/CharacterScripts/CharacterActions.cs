@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -32,7 +32,10 @@ public class CharacterActions : MonoBehaviour {
 	public Image cdMeleeImage;
     public Image cdTeleporterImage;
 
-	void Start () {
+    Vector3 v3 = new Vector3(0, 0, 0);
+
+    void Start () {
+        this.spearOn = true;
         this.onMeleeCd = false;
         this.countMelee = 0.2f;
         this.speed = 5f;
@@ -44,24 +47,31 @@ public class CharacterActions : MonoBehaviour {
     }
 	
     void Moving() {
-        if (Input.GetKey(KeyCode.A))
-            this.transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime;
-        else if (Input.GetKey(KeyCode.D))
-            this.transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
-        else if (Input.GetKey(KeyCode.W))
-            this.transform.position += new Vector3(0, speed, 0) * Time.deltaTime;
-        else if (Input.GetKey(KeyCode.S))
-            this.transform.position += new Vector3(0, -speed, 0) * Time.deltaTime;
+
+        if (Input.GetKey(KeyCode.A)) {
+            this.transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime * 1.2f;
+        }
+
+        else if (Input.GetKey(KeyCode.D)) {
+            this.transform.position += new Vector3(speed, 0, 0) * Time.deltaTime * 1.2f;
+        }
+        else if (Input.GetKey(KeyCode.W)) {
+            this.transform.position += new Vector3(0, speed, 0) * Time.deltaTime * 1.2f;
+        }
+        else if (Input.GetKey(KeyCode.S)) {
+            this.transform.position += new Vector3(0, -speed, 0) * Time.deltaTime * 1.2f;
+        }
 
 
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
-            this.transform.position += ((new Vector3(-speed, speed, 0)).normalized) * speed * Time.deltaTime;
+            this.transform.position += ((new Vector3(-speed + 10, speed + 10, 0)).normalized) * speed * Time.deltaTime / 1.2f;
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
-            this.transform.position += ((new Vector3(speed, speed, 0)).normalized) * speed * Time.deltaTime;
+            this.transform.position += ((new Vector3(speed - 10, speed + 10, 0)).normalized) * speed * Time.deltaTime / 1.2f; 
         if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
-            this.transform.position += ((new Vector3(speed, -speed, 0)).normalized) * speed * Time.deltaTime;
+            this.transform.position += ((new Vector3(speed - 10, -speed - 10, 0)).normalized) * speed * Time.deltaTime / 1.2f;
         if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
-            this.transform.position += ((new Vector3(-speed, -speed, 0)).normalized) * speed * Time.deltaTime;
+            this.transform.position += ((new Vector3(-speed + 10, -speed - 10, 0)).normalized) * speed * Time.deltaTime / 1.2f;
+
 
         mousePosition = Input.mousePosition;
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
@@ -90,6 +100,7 @@ public class CharacterActions : MonoBehaviour {
             this.transform.position += new Vector3(this.transform.position.x + (+ teleport), this.transform.position.y + (- teleport), 0) * Time.deltaTime;
         if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
             this.transform.position += new Vector3(this.transform.position.x + (- teleport), this.transform.position.y + (- teleport), 0) * Time.deltaTime;
+        original = this.gameObject.GetComponent<SpriteRenderer>().sprite;
         this.gameObject.GetComponent<SpriteRenderer>().sprite = teleporte;
         teleporteSound.Play();
         isOnTeleportCooldown = true;
@@ -148,6 +159,7 @@ public class CharacterActions : MonoBehaviour {
     }
 
     void Update() {
+        
         travar = GameObject.Find("Controlador").GetComponent<pauseMenu>().paused;
         if (travar == false) {
             Moving();
