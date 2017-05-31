@@ -33,7 +33,6 @@ public class CharacterActions : MonoBehaviour {
     public Image cdTeleporterImage;
 
 	void Start () {
-        this.spearOn = true;
         this.onMeleeCd = false;
         this.countMelee = 0.2f;
         this.speed = 5f;

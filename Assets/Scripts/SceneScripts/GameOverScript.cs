@@ -63,7 +63,10 @@ public class GameOverScript : MonoBehaviour {
 
         else
         {
-			if (!bossStage) {
+
+            SceneManager.LoadScene("BossCutscene");
+
+            /*if (!bossStage) {
 				GameObject[] enemiesToDestroy = GameObject.FindGameObjectsWithTag ("Enemy");
 				for (int i = 0; i < enemiesToDestroy.Length; i++) {
 					Destroy (enemiesToDestroy [i]);
@@ -97,7 +100,7 @@ public class GameOverScript : MonoBehaviour {
 				StartCoroutine (enterBossStage ());
 
 				bossStage = true;
-			}
+			}*/
 
 
         }

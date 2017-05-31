@@ -82,7 +82,7 @@ public class PlayerHealth : MonoBehaviour {
     }
 
     void OnCollisionEnter2D(Collision2D coll) {
-        if (coll.gameObject.tag == "Enemy" || coll.gameObject.tag == "Hazard") {
+        if (coll.gameObject.tag == "Enemy" || coll.gameObject.tag == "Hazard" || coll.gameObject.tag == "Boss") {
             Damage();
             if(invunerable == false) StartCoroutine(afterDamage());
         }

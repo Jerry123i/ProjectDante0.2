@@ -81,7 +81,6 @@
     <Compile Include="Assets\Scripts\CharacterScripts\projectileScript.cs" />
     <Compile Include="Assets\Scripts\ColdownImageScript.cs" />
     <Compile Include="Assets\Scripts\CrowdScript.cs" />
-    <Compile Include="Assets\Scripts\CutsceneScript.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\BossController.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyHealth.cs" />
@@ -90,7 +89,10 @@
     <Compile Include="Assets\Scripts\EnemyScripts\SawBehaviour.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\lawBehaviour.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\littleLawBehaviour.cs" />
+    <Compile Include="Assets\Scripts\SceneScripts\BossCutsceneScript.cs" />
+    <Compile Include="Assets\Scripts\SceneScripts\BossWatcher.cs" />
     <Compile Include="Assets\Scripts\SceneScripts\Credits.cs" />
+    <Compile Include="Assets\Scripts\SceneScripts\CutsceneScript.cs" />
     <Compile Include="Assets\Scripts\SceneScripts\GameOverScript.cs" />
     <Compile Include="Assets\Scripts\SceneScripts\HighScore.cs" />
     <Compile Include="Assets\Scripts\SceneScripts\MenuControl.cs" />
