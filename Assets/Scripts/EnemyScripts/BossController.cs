@@ -27,6 +27,7 @@ public class BossController : MonoBehaviour {
         this.GetComponent<SpriteRenderer>().color = Color.yellow;
         player = GameObject.FindGameObjectsWithTag("Player")[0];
         shotDistance = 8;
+        this.GetComponent<EnemyHealth>().initialSpeed = 2;
     }
 
     // Update is called once per frame
