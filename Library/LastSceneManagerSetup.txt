@@ -1,5 +1,20 @@
 sceneSetups:
+- path: Assets/Scenes/WinScene.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Scenes/Instrucoes.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Scenes/CameraTests.unity
+  isLoaded: 1
+  isActive: 1
+- path: Assets/Scenes/Creditos.unity
+  isLoaded: 0
+  isActive: 0
 - path: Assets/Scenes/StageOne.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Scenes/Menu.unity
   isLoaded: 0
   isActive: 0
 - path: Assets/Scenes/BossCutscene.unity
@@ -8,12 +23,3 @@ sceneSetups:
 - path: Assets/Scenes/BossFight.unity
   isLoaded: 0
   isActive: 0
-- path: Assets/Scenes/WinScene.unity
-  isLoaded: 0
-  isActive: 0
-- path: Assets/Scenes/Menu.unity
-  isLoaded: 0
-  isActive: 0
-- path: Assets/Scenes/CameraTests.unity
-  isLoaded: 1
-  isActive: 1

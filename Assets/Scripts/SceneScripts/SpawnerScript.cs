@@ -7,7 +7,8 @@ public class SpawnerScript : MonoBehaviour
 
     public GameObject[] spawners;
     GameObject HotSpawner;
-    public GameObject enemy;
+    public GameObject[] enemies;
+    public int[] spawnList;
 
     public Sprite pitCold;
     public Sprite pitHot;
@@ -39,6 +40,7 @@ public class SpawnerScript : MonoBehaviour
             activeSpawning = true;
             waves++;
             nToSpawn = EnemiesPerWave(waves);
+            spawnList = WhatToSpawn(waves);
             HotSpawner = spawners[Random.Range(0, spawners.Length)];
             HotSpawner.GetComponent<SpriteRenderer>().sprite = pitHot;
 
@@ -50,7 +52,7 @@ public class SpawnerScript : MonoBehaviour
             {
                 if (spawnCDClock>= 1.0f)
                 {
-                    instance = Instantiate(enemy, HotSpawner.transform.position, Quaternion.Euler(Vector3.zero));
+                    instance = Instantiate(enemies[spawnList[nToSpawn-1]], HotSpawner.transform.position, Quaternion.Euler(Vector3.zero));
 					instance.GetComponent<EnemyHealth>().initialSpeed *= MultiplierPerTime(totalTime);
                     spawnCDClock = 0f;
                     nToSpawn--;
@@ -84,9 +86,55 @@ public class SpawnerScript : MonoBehaviour
 
     }
 
+    int[] WhatToSpawn(int currentWave)
+    {
+        int[] retornavel;
+
+        switch (currentWave)
+        {
+            case 1:
+                retornavel = new int[3] { 0, 0, 0 };
+                break;
+
+            case 2:
+                retornavel = new int[4] { 0, 0, 0, 0 };
+                break;
+
+            case 3:
+                retornavel = new int[4] { 0, 0, 0, 1 };
+                break;
+
+            case 4:
+                retornavel = new int[4] { 0, 1, 1, 0 };
+                break;
+
+            case 5:
+                retornavel = new int[5] { 0, 0, 0, 0 ,1};
+                break;
+
+            case 6:
+                retornavel = new int[6] { 2, 0, 1, 0 , 1, 0};
+                break;
+
+            case 7:
+                retornavel = new int[4] {0, 1, 0, 1 };
+                break;
+
+            default:
+                retornavel = new int[1] { 0 };
+                break;
+
+        }
+
+        return retornavel;
+    }
+
     int EnemiesPerWave(int currentWave)
     {
-        switch (currentWave)
+
+        return WhatToSpawn(currentWave).Length;
+
+       /* switch (currentWave)
         {
             case 1:
                 return 3;
@@ -112,7 +160,7 @@ public class SpawnerScript : MonoBehaviour
                 {
                     return (7 + Mathf.FloorToInt(((currentWave - 10) / 6)));
                 }
-        }
+        }*/
     }
 
     float MultiplierPerTime(float time)

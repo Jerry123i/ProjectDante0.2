@@ -45,23 +45,33 @@ public class CharacterActions : MonoBehaviour {
 	
     void Moving() {
         if (Input.GetKey(KeyCode.A))
-            this.transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime;
+        {
+            this.transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime * 1.2f;
+        }
+
         else if (Input.GetKey(KeyCode.D))
-            this.transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
+        {
+            this.transform.position += new Vector3(speed, 0, 0) * Time.deltaTime * 1.2f;
+        }
         else if (Input.GetKey(KeyCode.W))
-            this.transform.position += new Vector3(0, speed, 0) * Time.deltaTime;
+        {
+            this.transform.position += new Vector3(0, speed, 0) * Time.deltaTime * 1.2f;
+        }
         else if (Input.GetKey(KeyCode.S))
-            this.transform.position += new Vector3(0, -speed, 0) * Time.deltaTime;
+        {
+            this.transform.position += new Vector3(0, -speed, 0) * Time.deltaTime * 1.2f;
+        }
 
 
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
-            this.transform.position += ((new Vector3(-speed, speed, 0)).normalized) * speed * Time.deltaTime;
-        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
-            this.transform.position += ((new Vector3(speed, speed, 0)).normalized) * speed * Time.deltaTime;
-        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
-            this.transform.position += ((new Vector3(speed, -speed, 0)).normalized) * speed * Time.deltaTime;
-        if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
-            this.transform.position += ((new Vector3(-speed, -speed, 0)).normalized) * speed * Time.deltaTime;
+            this.transform.position += ((new Vector3(-speed + 10, speed + 10, 0)).normalized) * speed * Time.deltaTime / 1.2f;
+        else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
+            this.transform.position += ((new Vector3(speed - 10, speed + 10, 0)).normalized) * speed * Time.deltaTime / 1.2f;
+        else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
+            this.transform.position += ((new Vector3(speed - 10, -speed - 10, 0)).normalized) * speed * Time.deltaTime / 1.2f;
+        else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
+            this.transform.position += ((new Vector3(-speed + 10, -speed - 10, 0)).normalized) * speed * Time.deltaTime / 1.2f;
+
 
         mousePosition = Input.mousePosition;
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
