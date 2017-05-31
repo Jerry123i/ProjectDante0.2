@@ -18,6 +18,7 @@ public class SpawnerScript : MonoBehaviour
     bool activeSpawning;
     int nToSpawn;
     float spawnCDClock;
+    public GameOverScript hypeHolder;
 
     int waves;
     float totalTime;
@@ -104,7 +105,7 @@ public class SpawnerScript : MonoBehaviour
                 break;
 
             case 2:
-                retornavel = new int[4] { 0, 0, 0, 0 };
+                retornavel = new int[4] { 3, 0, 3, 0 };
                 break;
 
             case 3:
@@ -112,19 +113,19 @@ public class SpawnerScript : MonoBehaviour
                 break;
 
             case 4:
-                retornavel = new int[4] { 0, 1, 1, 0 };
+                retornavel = new int[4] { 4, 4, 4, 4 };
                 break;
 
             case 5:
-                retornavel = new int[6] {2, 0, 0, 0, 0 ,1};
+                retornavel = new int[6] {1, 0, 0, 0, 0 ,2};
                 break;
 
             case 6:
-                retornavel = new int[5] {0, 1, 0 , 1, 0};
+                retornavel = new int[5] {4, 1, 4 , 1, 4};
                 break;
 
             case 7:
-                retornavel = new int[4] {0, 1, 0, 1 };
+                retornavel = new int[5] {3, 1, 0, 3, 2};
                 break;
 
             default:
@@ -143,30 +144,63 @@ public class SpawnerScript : MonoBehaviour
 
     float MultiplierPerTime(float time)
     {
-        if (time < 8.0f)
+        float hype = hypeHolder.hype;
+
+        if (hype < hypeHolder.minimalHype / 5)
         {
             return 1f;
         }
 
-        else if (time < 16.0f)
+        else if (hype < hypeHolder.minimalHype*2 / 5)
         {
             return 1.3f;
         }
 
-        else if (time < 24.0f)
+        else if (hype < hypeHolder.minimalHype * 3 / 5)
         {
-            return 1.4f;
+            return 1.55f;
         }
 
-        else if (time < 32.0f)
+        else if (hype < hypeHolder.minimalHype * 4 / 5)
         {
             return 1.8f;
         }
 
         else
         {
-            return 2.0f;
+            return 2f;
         }
+
+
+        /*if (time < 8.0f)
+        {
+            return 1f;
+        }
+
+        else if (time < 24.0f)
+        {
+            Debug.Log("T2");
+            return 1.3f;
+            
+        }
+
+        else if (time < 32.0f)
+        {
+            Debug.Log("T3");
+            return 1.4f;
+        }
+
+        else if (time < 40.0f)
+        {
+            Debug.Log("T4");
+            return 1.8f;
+        }
+
+        else
+        {
+            Debug.Log("T5");
+            return 2.0f;
+        }*/
     }
         
 }

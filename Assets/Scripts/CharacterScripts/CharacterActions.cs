@@ -33,7 +33,7 @@ public class CharacterActions : MonoBehaviour {
     public Image cdTeleporterImage;
 
 	void Start () {
-        this.onMeleeCd = false;
+        //this.onMeleeCd = false;
         this.countMelee = 0.2f;
         this.speed = 5f;
         this.teleport = 100f;
@@ -118,9 +118,9 @@ public class CharacterActions : MonoBehaviour {
     {
 		if (Input.GetMouseButtonDown(0) && !onMeleeCd)
 		{
-			meleeHit.GetComponent<PolygonCollider2D>().enabled = true;
-			meleeHit.GetComponent<SpriteRenderer>().enabled = true;
-			onMeleeCd = true;
+            meleeHit.GetComponent<PolygonCollider2D>().enabled = true;
+            meleeHit.GetComponent<SpriteRenderer>().enabled = true;
+            onMeleeCd = true;
 		}
 
 		if (onMeleeCd && countMelee > 0)
