@@ -12,16 +12,22 @@ public class projectileScript : MonoBehaviour {
     GameObject watcher;
     public AudioClip hitSound;
     public AudioClip pickupSound;
+    bool travar;
     
 	void Start () {
         nOfHits = 0;
         isProjectile = true;
         watcher = GameObject.FindGameObjectWithTag("Watcher");
+	travar = GameObject.Find("Controlador").GetComponent<pauseMenu>().paused;
 	}
+	
+	void Update () {
+        travar = GameObject.Find("Controlador").GetComponent<pauseMenu>().paused;
+    }
 	
 	void LateUpdate () { //talvez por no lateupdate
 
-        if (isProjectile){
+        if (isProjectile && travar == false){
             thisTransform.Translate(Vector3.up * speed);
         }
 
