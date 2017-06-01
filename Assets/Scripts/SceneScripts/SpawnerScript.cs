@@ -101,7 +101,7 @@ public class SpawnerScript : MonoBehaviour
         switch (currentWave)
         {
             case 1:
-                retornavel = new int[3] { 0, 0, 0 };
+                retornavel = new int[4] { 0, 0, 0, 2 };
                 break;
 
             case 2:
@@ -117,7 +117,7 @@ public class SpawnerScript : MonoBehaviour
                 break;
 
             case 5:
-                retornavel = new int[6] {1, 0, 0, 0, 0 ,2};
+                retornavel = new int[5] {1, 0, 0, 0, 0};
                 break;
 
             case 6:
