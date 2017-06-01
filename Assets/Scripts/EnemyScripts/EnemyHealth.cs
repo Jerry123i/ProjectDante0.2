@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyHealth : MonoBehaviour {
 
@@ -27,6 +28,7 @@ public class EnemyHealth : MonoBehaviour {
     public float debugClock;
     public bool balancing;
 
+
     void Start() {
 
         currentHealth = totalHealth; // Começa dando a vida específica total do monstro para a vida atual
@@ -34,7 +36,12 @@ public class EnemyHealth : MonoBehaviour {
         meleeClock = 0;
         debugClock = 0;
         onMeleeHit = false;
-                   
+        
+
+        if (this.gameObject.tag == "Boss")
+        {
+            this.GetComponent<BossController>().bossEnter.Play();
+        }
     }
 
     void Update()
@@ -77,6 +84,14 @@ public class EnemyHealth : MonoBehaviour {
             GameObject.FindGameObjectWithTag("Watcher").GetComponent<AudioSource>().PlayOneShot(deathSound, 0.4f);
             GameObject.FindGameObjectWithTag("Watcher").GetComponent<AudioSource>().pitch = 1.0f;
             Destroy(this.gameObject);
+        }
+
+        if (this.gameObject.tag == "Boss")
+        {
+            if (currentHealth >= 3)
+                this.GetComponent<BossController>().bossAudioKnockback.Play();
+            else if (currentHealth > 0)
+                this.GetComponent<BossController>().bossAudioDamage.Play();
         }
             
     }

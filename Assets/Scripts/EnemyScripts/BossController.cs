@@ -21,6 +21,10 @@ public class BossController : MonoBehaviour {
     public GameObject prefab;
     public GameObject watcher;
 
+    public AudioSource bossAudioDamage;
+    public AudioSource bossAudioKnockback;
+    public AudioSource bossEnter;
+
     // Use this for initialization
     void Start () {
         this.spearOn = false;
