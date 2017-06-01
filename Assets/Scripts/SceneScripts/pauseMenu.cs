@@ -37,7 +37,7 @@ public class pauseMenu : MonoBehaviour {
     }
 
     public void menuPrincipal() {
-        Application.LoadLevel("MenuPrincipal");
+        Application.LoadLevel("Menu");
     }
 
     public void muteSound() {
