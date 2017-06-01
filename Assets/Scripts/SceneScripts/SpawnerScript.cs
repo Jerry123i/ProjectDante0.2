@@ -59,7 +59,7 @@ public class SpawnerScript : MonoBehaviour
                     {
                         instance.GetComponent<EnemyHealth>().initialSpeed *= MultiplierPerTime(totalTime);
                         instance.GetComponent<EnemyHealth>().initialSpeed += Random.Range(-0.5f, 0.5f);
-                        instance.GetComponent<EnemyHealth>().slipTime += Random.Range(-0.1f, 0.6f);
+                        instance.GetComponent<EnemyHealth>().slipTime *= Random.Range(0.75f, 1.25f);
                     }
 
                     spawnCDClock = 0f;
@@ -101,7 +101,7 @@ public class SpawnerScript : MonoBehaviour
         switch (currentWave)
         {
             case 1:
-                retornavel = new int[3] { 0, 0, 0 };
+                retornavel = new int[4] { 0, 0, 0, 2};
                 break;
 
             case 2:
@@ -113,11 +113,11 @@ public class SpawnerScript : MonoBehaviour
                 break;
 
             case 4:
-                retornavel = new int[4] { 4, 4, 4, 4 };
+                retornavel = new int[3] { 4, 4, 4};
                 break;
 
             case 5:
-                retornavel = new int[6] {1, 0, 0, 0, 0 ,2};
+                retornavel = new int[5] {1, 0, 3, 3, 3};
                 break;
 
             case 6:
@@ -129,7 +129,7 @@ public class SpawnerScript : MonoBehaviour
                 break;
 
             default:
-                retornavel = new int[1] { 0 };
+                retornavel = new int[4] {Random.Range(0,5), Random.Range(0, 5), Random.Range(0, 5), Random.Range(0, 5) };
                 break;
 
         }

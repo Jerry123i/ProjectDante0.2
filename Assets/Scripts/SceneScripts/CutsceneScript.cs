@@ -36,6 +36,11 @@ public class CutsceneScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        if (Input.GetMouseButton(0))
+        {
+            SceneManager.LoadScene("Menu");
+        }
+
         timer += Time.deltaTime;
 
         switch (cenaCounter)

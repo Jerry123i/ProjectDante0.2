@@ -112,7 +112,7 @@ public class GameOverScript : MonoBehaviour {
     {
         if (hype/nextLevelHype <= 1)
         {
-            hypeBar.fillAmount = hype / nextLevelHype;
+            hypeBar.fillAmount = hype / minimalHype;
         }
     }
 

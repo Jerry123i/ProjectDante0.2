@@ -44,6 +44,11 @@ public class BossCutsceneScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        if (Input.GetMouseButton(0))
+        {
+            SceneManager.LoadScene("BossFight");
+        }
+
         timer += Time.deltaTime;
         
             if (!(background.sprite == img2))

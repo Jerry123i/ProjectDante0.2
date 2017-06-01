@@ -13,6 +13,7 @@ public class EnemyShooter : MonoBehaviour
     public GameObject prefab;
     private bool canShoot = true;
     Transform enemyProjectileTransform;
+    public float shootInterval;
 
     Vector3 rotateTarget;
 
@@ -65,7 +66,7 @@ public class EnemyShooter : MonoBehaviour
     IEnumerator afterShoot()
     {
         canShoot = false;
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(shootInterval);
         canShoot = true;
     }
 

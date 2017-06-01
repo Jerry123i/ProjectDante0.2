@@ -184,7 +184,15 @@ public class CharacterActions : MonoBehaviour {
             }            
 
             if (teleportTimer >= 1) {
-                this.gameObject.GetComponent<SpriteRenderer>().sprite = original;
+                //this.gameObject.GetComponent<SpriteRenderer>().sprite = original;
+                if (spearOn)
+                {
+                    this.gameObject.GetComponent<SpriteRenderer>().sprite = spriteLanca;
+                }
+                else
+                {
+                    this.gameObject.GetComponent<SpriteRenderer>().sprite = spriteSemLanca;
+                }
             }
 
             if (teleportTimer >= teleportCd)
